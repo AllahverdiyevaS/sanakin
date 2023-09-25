@@ -1,0 +1,14 @@
+*,
+html,
+body{margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Inter', sans-serif;}
+ul{list-style: none;}
+a{text-decoration: none;
+color: black;}
+button{border: none;}
+#logo{padding: 1.7rem;}
+.sidebar-container{width: 250px;
+min-height: 100vh;
+background-color: #fbf9f8;}
