@@ -108,7 +108,7 @@ button {
 .grid-container {
   display: grid;
   grid-template-columns: 250px 1fr 1fr 1fr;
-  grid-template-rows: 120px 1fr;
+  grid-template-rows: 120px auto auto 1fr;
   gap: 20px;
 }
 .header-container {
@@ -127,14 +127,16 @@ button {
   padding-left: 1.25rem;
   padding-right: 1.9rem;
 }
+
 .order-action-container {
   border-radius: 9px;
   background: #ffe3b7;
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
   max-width: 325px;
-  height: 163px;
+
   position: relative;
 }
+
 .order-action-container i {
   position: absolute;
   right: 1.25rem;
@@ -147,10 +149,10 @@ button {
   background: #ffffff;
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
   width: 440px;
-  height: 440px;
+  height: auto;
   padding-top: 15px;
   padding-left: 1.25rem;
-  position: relative;
+
   display: flex;
   flex-direction: column;
 }
@@ -261,18 +263,14 @@ button {
 .round_img {
   width: 48%;
   height: 210px;
+  margin-top: 20px;
+  position: relative;
+  margin-right: 1rem;
+}
 
-  position: absolute;
-  top: 2.5rem;
-  right: 1.13rem;
-}
-.round_img img {
-  position: relative;
-}
 .elements-container {
-  position: relative;
-  /* display: flex;
-  gap: 5%; */
+  display: flex;
+  justify-content: space-between;
 }
 .round_img p {
   position: absolute;
@@ -287,17 +285,54 @@ button {
 .products p {
   padding: 10px 0;
 }
+.black-text {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
+}
 
 .products {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  bottom: 1.3rem;
+  margin: 0 1.25rem 20px 1.25rem;
+  position: relative;
 }
 .products div {
   display: flex;
   gap: 50%;
-  border-bottom: 1px solid black;
+  border-bottom: 0.5px solid #848484;
+}
+.products h5 {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  border-radius: 5px;
+  right: 0;
+
+  background-color: #f3f3f3;
+  width: 10px;
+  height: 130px;
+}
+.scroll div {
+  background-color: #c1c1c1;
+  width: 100%;
+  border-radius: 5px;
+  height: 50%;
+}
+.red-text {
+  color: #dd3a3a;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
 }
 
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
@@ -311,5 +346,71 @@ button {
   .child7 {
     grid-column: 2/4;
     grid-row: 5/6;
+  }
+}
+@media only screen and (min-width: 350px) and (max-width: 800px) {
+  .header-container {
+    grid-column: 2 / span2;
+  }
+  .child7 {
+    grid-column: 2/4;
+    grid-row: 5/6;
+  }
+  .header-container p:first-child {
+    font-size: 20px;
+  }
+  .header-container p:nth-child(2) {
+    font-size: 16px;
+  }
+  .order-static-container {
+    width: 100%;
+    max-width: 440px;
+  }
+  .elements-container {
+    flex-wrap: wrap;
+  }
+  .products {
+    margin-left: 0.5rem;
+  }
+  .products div {
+    gap: 10px;
+  }
+  .header-container {
+    flex-wrap: wrap;
+  }
+  .order-status-container {
+    flex-wrap: wrap;
+  }
+  .number {
+    font-size: 20px;
+  }
+  .order-status-container i {
+    font-size: 1.5rem;
+  }
+  .text {
+    font-size: 10px;
+  }
+  .scroll {
+    visibility: hidden;
+  }
+  .order-action-container i {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 1rem;
+  }
+  .order-action p:first-child {
+    font-size: 14px;
+  }
+  .order-action p:nth-child(2) {
+    font-size: 10px;
+  }
+  .order-action {
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+  }
+  .round_img {
+    width: 100%;
+    height: auto;
   }
 }
